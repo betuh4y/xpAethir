@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XP Aerthir</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="./index.js" defer=""></script>
+    <link rel="stylesheet" href="./index.css">
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>Calculadora De XP Aerthir </h1>
+
+      <!-- Link para o Discord -->
+      <div class="discord-link">
+        <a href="https://discord.gg/kw4JMpTT" target="_blank">
+          <img src="https://scontent.frec49-1.fna.fbcdn.net/v/t39.30808-6/469864467_9059782484079717_9206932392559448853_n.jpg?stp=cp0_dst-jpg_tt6&amp;_nc_cat=110&amp;ccb=1-7&amp;_nc_sid=127cfc&amp;_nc_eui2=AeH_kVVRNamd8pfuKYceTIC6AbO3vSBp_8ABs7e9IGn_wOugSley9UXa9wPineheivJhq-lJD2btSb3pc8zFos1s&amp;_nc_ohc=DoW4b3JoDzEQ7kNvgGvRFpN&amp;_nc_zt=23&amp;_nc_ht=scontent.frec49-1.fna&amp;_nc_gid=AfL-CFHp_C8xkbzZEBrePb5&amp;oh=00_AYCOmC_DwsDKxWdVG4DgG8zfj3QP-Ot5Kni4oTiBgHyb2g&amp;oe=675DB30A" alt="Discord" class="discord-image">
+        </a>
+      </div>
+
+      <form id="calcForm">
+        <label for="xp">Pontos para alcançar o próximo nível:</label>
+        <input type="number" id="xp" placeholder="Exemplo: 580" required="">
+
+        <label for="pointsPerMessage">Pontos ganhos por mensagem:</label>
+        <select id="pointsPerMessage" required="">
+          <option value="3">3 pontos</option>
+          <option value="6">6 pontos</option>
+        </select>
+
+        <label for="interval">Intervalo entre mensagens (segundos):</label>
+        <input type="number" id="interval" placeholder="Exemplo: 10" value="10" required="">
+
+        <button type="submit">Calcular</button>
+      </form>
+
+      <div id="result" class="hidden">
+        <p>Mensagens necessárias: <span id="messagesRequired"></span></p>
+        <p>Tempo necessário: <span id="timeRequired"></span></p>
+      </div>
+    </div>
+
+    <audio id="notificationSound" src="notification.mp3"></audio>
+    <script src="script.js"></script>
+
+
+  </body>
+
+</html>
